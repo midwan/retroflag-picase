@@ -36,7 +36,7 @@ if [ -e $script ];
 	then
 		echo "Script SafeShutdown.py already exists. Doing nothing."
 	else
-		wget --no-check-certificate -O  $script "https://raw.githubusercontent.com/RetroFlag/retroflag-picase/master/recalbox_SafeShutdown.py"
+		wget --no-check-certificate -O  $script "https://raw.githubusercontent.com/midwan/retroflag-picase/master/recalbox_SafeShutdown.py"
 fi
 #-----------------------------------------------------------
 

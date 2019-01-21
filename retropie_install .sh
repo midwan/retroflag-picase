@@ -32,13 +32,13 @@ sudo apt-get install -y python3-gpiozero
 cd /opt/
 sudo mkdir RetroFlag
 cd /opt/RetroFlag
-script=SafeShutdown.py
+script=retropie_SafeShutdown.py
 
 if [ -e $script ];
 	then
-		echo "Script SafeShutdown.py already exists. Doing nothing."
+		echo "Script retropie_SafeShutdown.py already exists. Doing nothing."
 	else
-		wget "https://raw.githubusercontent.com/midwan/retroflag-picase/master/SafeShutdown.py"
+		wget "https://raw.githubusercontent.com/midwan/retroflag-picase/master/retropie_SafeShutdown.py"
 fi
 #-----------------------------------------------------------
 
@@ -46,11 +46,11 @@ fi
 cd /etc/
 RC=rc.local
 
-if grep -q "sudo python3 \/opt\/RetroFlag\/SafeShutdown.py \&" "$RC";
+if grep -q "sudo python3 \/opt\/RetroFlag\/retropie_SafeShutdown.py \&" "$RC";
 	then
 		echo "File /etc/rc.local already configured. Doing nothing."
 	else
-		sed -i -e "s/^exit 0/sudo python3 \/opt\/RetroFlag\/SafeShutdown.py \&\n&/g" "$RC"
+		sed -i -e "s/^exit 0/sudo python3 \/opt\/RetroFlag\/retropie_SafeShutdown.py \&\n&/g" "$RC"
 		echo "File /etc/rc.local configured."
 fi
 #-----------------------------------------------------------
