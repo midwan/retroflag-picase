@@ -8,7 +8,7 @@ Turn switch "SAFE SHUTDOWN" on PCB to ON.
 
 --------------------
 
-Example for Generic distros (Raspbian, DietPi, Amibian, etc.):
+Example for Raspbian:
 1. Make sure internet is connected.
 2. Make sure keyboard is connected.
 3. Open a terminal
